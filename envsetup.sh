@@ -51,5 +51,5 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export TEMPLATECONF=${WORKSPACE_BASE}/layers/layer-core/meta-core/conf/templates/default/
 export DISTRO=systemd-core
-# export MACHINE=""
+export MACHINE="systemd-core"
 source poky/oe-init-build-env ${WORKSPACE_BASE}/${BUILD_DIR}
