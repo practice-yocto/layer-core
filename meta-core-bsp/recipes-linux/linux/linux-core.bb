@@ -59,6 +59,9 @@ PV = "${LINUX_VERSION}+git${SRCPV}"
 # COMPATIBLE_MACHINE: Restricts this recipe to specific machines
 COMPATIBLE_MACHINE = "core"
 
+# RPROVIDES: Ensures this kernel package also provides the module name
+# for dependency resolution.
+RPROVIDES:${PN} += "kernel-module-hello-kmodule"
 
 # -----------------------------------------------------------------------------
 # File search path
