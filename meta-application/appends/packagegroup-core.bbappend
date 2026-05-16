@@ -3,4 +3,5 @@
 # installed on the target system at runtime.
 RDEPENDS:${PN} += "\
     hello-app \
+    nano-editor \
     "
