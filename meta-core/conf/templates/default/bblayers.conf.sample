@@ -11,4 +11,5 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-yocto-bsp \
   ##OEROOT##/../layers/layer-core/meta-core \
   ##OEROOT##/../layers/layer-core/meta-core-bsp \
+  ##OEROOT##/../layers/layer-core/meta-application \
   "
