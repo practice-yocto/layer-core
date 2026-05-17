@@ -1,3 +1,8 @@
+# Add additional features to the generated image.
+# In this case, enable the OpenSSH server so the target system
+# boots with an SSH daemon running and ready for remote access.
+EXTRA_IMAGE_FEATURES += "ssh-server-openssh"
+
 # Post-processing function that writes the current value of
 # ROOTFS_POSTPROCESS_COMMAND into a file inside the target rootfs.
 # This is mainly for debugging to verify which postprocess commands
