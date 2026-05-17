@@ -4,4 +4,5 @@
 RDEPENDS:${PN} += "\
     hello-app \
     nano-editor \
+    use-hello-lib \
     "
