@@ -13,4 +13,8 @@ BBLAYERS ?= " \
   ##OEROOT##/../layers/layer-core/meta-core-bsp \
   ##OEROOT##/../layers/layer-core/meta-application \
   ##OEROOT##/../layers/layer-core/meta-library \
+  ##OEROOT##/../layers/meta-openembedded/meta-oe \
+  ##OEROOT##/../layers/meta-clang \
+  ##OEROOT##/../layers/meta-openembedded/meta-python \
+  ##OEROOT##/../layers/meta-selinux \
   "

@@ -34,6 +34,11 @@ SRC_URI += "\
     file://qemuarm64-ext.cfg \
     "
 
+# Append selinux.cfg to SRC_URI only when the target machine declares
+# the 'selinux' feature. This allows SELinux-specific configuration
+# to be included conditionally based on MACHINE_FEATURES.
+SRC_URI:append = "${@bb.utils.contains('MACHINE_FEATURES', 'selinux', ' file://selinux.cfg', '', d)}"
+
 
 # -----------------------------------------------------------------------------
 # Kernel build configuration

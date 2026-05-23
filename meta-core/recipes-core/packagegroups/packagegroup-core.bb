@@ -45,6 +45,7 @@ RDEPENDS:${PN} = "\
     ${@bb.utils.contains('DISTRO_FEATURES', 'sysvinit', '${SYSVINIT_SCRIPTS}', '', d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'keyboard', '${VIRTUAL-RUNTIME_keymaps}', '', d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'efi', '${EFI_PROVIDER} kernel', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'selinux', 'packagegroup-core-selinux refpolicy-mls', '', d)} \
     netbase \
     ${VIRTUAL-RUNTIME_login_manager} \
     ${VIRTUAL-RUNTIME_init_manager} \

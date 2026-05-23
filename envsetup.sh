@@ -50,6 +50,6 @@ function do_sstate_mirror() {
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export TEMPLATECONF=${WORKSPACE_BASE}/layers/layer-core/meta-core/conf/templates/default/
-export DISTRO=systemd-core
-export MACHINE="systemd-core"
+export DISTRO="${DISTRO:-selinux-core}"
+export MACHINE="${MACHINE:-selinux-core}"
 source poky/oe-init-build-env ${WORKSPACE_BASE}/${BUILD_DIR}

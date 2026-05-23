@@ -13,6 +13,11 @@ KERNEL_CONFIG_FRAGMENTS = "\
     ${THISDIR}/files/qemuarm64-ext.cfg \
     "
 
+# Append selinux.cfg to SRC_URI only when the target machine declares
+# the 'selinux' feature. This allows SELinux-specific configuration
+# to be included conditionally based on MACHINE_FEATURES.
+KERNEL_CONFIG_FRAGMENTS:append = "${@bb.utils.contains('MACHINE_FEATURES', 'selinux', ' ${THISDIR}/files/selinux.cfg', '', d)}"
+
 
 # -----------------------------------------------------------------------------
 # Force manual merging of kernel config fragments when externalsrc is used.
