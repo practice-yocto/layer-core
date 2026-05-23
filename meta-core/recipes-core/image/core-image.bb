@@ -74,3 +74,8 @@ EXTRA_USERS_PARAMS = "\
     groupadd ${CORE_GROUP_NAME}; \
     useradd -p '${CORE_USER_PASSWORD}' -g ${CORE_GROUP_NAME} ${CORE_USER_NAME}; \
     "
+
+# Add kernel-devsrc to the SDK's target toolchain packages.
+# This ensures the generated SDK includes the full kernel source tree,
+# allowing developers to build out-of-tree kernel modules using the SDK.
+TOOLCHAIN_TARGET_TASK:append = " kernel-devsrc"
